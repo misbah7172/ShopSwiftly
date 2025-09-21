@@ -21,6 +21,23 @@ function requireAdmin(req: any, res: any, next: any) {
 export async function registerRoutes(app: Express): Promise<Server> {
   setupAuth(app);
 
+  // Health check endpoint for monitoring
+  app.get("/health", (req, res) => {
+    res.status(200).json({ 
+      status: "healthy", 
+      timestamp: new Date().toISOString(),
+      uptime: process.uptime()
+    });
+  });
+
+  // Root endpoint
+  app.get("/", (req, res) => {
+    res.status(200).json({ 
+      message: "ShopSwiftly API is running",
+      version: "1.0.0"
+    });
+  });
+
   // Product routes
   app.get("/api/products", async (req, res, next) => {
     try {

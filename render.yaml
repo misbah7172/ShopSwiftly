@@ -1,0 +1,30 @@
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: shopswiftly-postgres
+    env: node
+    plan: free
+    databases:
+      - name: shopswiftly_db
+        user: shopswiftly_user
+
+  # Web Service
+  - type: web
+    name: shopswiftly-web
+    env: node
+    plan: free
+    buildCommand: npm run render-build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: shopswiftly_db
+          property: connectionString
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: PORT
+        value: 10000
+    autoDeploy: true
