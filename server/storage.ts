@@ -32,7 +32,7 @@ export interface IStorage {
   clearCart(userId: string): Promise<boolean>;
 
   // Order methods
-  createOrder(order: InsertOrder, items: InsertOrderItem[]): Promise<Order>;
+  createOrder(order: InsertOrder, items: Omit<InsertOrderItem, 'orderId'>[]): Promise<Order>;
   getOrdersByUser(userId: string): Promise<(Order & { orderItems: (OrderItem & { product: Product })[] })[]>;
   getOrder(id: string): Promise<(Order & { orderItems: (OrderItem & { product: Product })[] }) | undefined>;
 
@@ -172,7 +172,7 @@ export class DatabaseStorage implements IStorage {
   }
 
   // Order methods
-  async createOrder(order: InsertOrder, items: InsertOrderItem[]): Promise<Order> {
+  async createOrder(order: InsertOrder, items: Omit<InsertOrderItem, 'orderId'>[]): Promise<Order> {
     const [newOrder] = await db
       .insert(orders)
       .values(order)

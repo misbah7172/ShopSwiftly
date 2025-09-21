@@ -161,9 +161,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         status: "pending"
       });
 
-      const orderItemsData = items.map((item: any) => 
-        insertOrderItemSchema.parse(item)
-      );
+      // Validate items before creating order (without orderId since it doesn't exist yet)
+      const orderItemsData = items.map((item: any) => {
+        // Validate that required fields are present
+        if (!item.productId || !item.quantity || !item.price) {
+          throw new Error("Missing required order item fields: productId, quantity, and price are required");
+        }
+        return {
+          productId: item.productId,
+          quantity: parseInt(item.quantity),
+          price: item.price.toString()
+        };
+      });
 
       const order = await storage.createOrder(orderData, orderItemsData);
       
