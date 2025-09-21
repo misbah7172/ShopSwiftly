@@ -1,0 +1,97 @@
+I want to create a full-stack E-commerce website using React.js (frontend), Node.js with Express (backend), and PostgreSQL (NeonDB) as the database. I will deploy and run everything inside Replit.
+
+Requirements & Features:
+
+Frontend (React.js)
+
+User-friendly and responsive design with TailwindCSS or Bootstrap.
+
+Pages:
+
+Home page (list of products).
+
+Product details page (with “Add to Cart” button).
+
+Cart page (view, update, remove items).
+
+Checkout page (mock checkout for now).
+
+Login/Signup page (JWT authentication).
+
+User profile page (with order history).
+
+State management using React Context or Redux.
+
+API calls to backend for authentication, products, and orders.
+
+Backend (Node.js + Express)
+
+Routes:
+
+/api/auth → Register, Login, Logout (JWT-based).
+
+/api/products → Get all products, Get single product.
+
+/api/cart → Add to cart, Remove from cart, Get user cart.
+
+/api/orders → Place order, Get user orders.
+
+Middleware for authentication and authorization.
+
+Error handling and input validation.
+
+Connect backend to NeonDB using pg npm package.
+
+Database (PostgreSQL via NeonDB)
+
+Database URL will be provided (from NeonDB).
+
+Tables:
+
+users (id, name, email, password_hash, created_at).
+
+products (id, name, description, price, stock, image_url).
+
+cart (id, user_id, product_id, quantity).
+
+orders (id, user_id, total_amount, created_at).
+
+order_items (id, order_id, product_id, quantity, price).
+
+Use migrations/seed data for initial setup.
+
+Security
+
+Passwords hashed with bcrypt.
+
+JWT tokens for authentication.
+
+Secure API routes (cart/orders require login).
+
+Replit Setup
+
+Create two Replit projects:
+
+Frontend: React app (Vite or CRA).
+
+Backend: Node.js + Express API.
+
+Connect Backend to NeonDB using the database URL.
+
+Configure CORS to allow frontend → backend communication.
+
+Use .env file in backend for sensitive keys:
+
+DATABASE_URL
+
+JWT_SECRET
+
+Start frontend on port 3000 and backend on port 5000.
+
+Extra
+
+Add a simple admin panel (protected route) to add/edit products.
+
+Deploy the site fully within Replit environment.
+
+Provide a README.md with setup steps.
