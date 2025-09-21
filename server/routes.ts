@@ -30,8 +30,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
     });
   });
 
-  // Root endpoint
-  app.get("/", (req, res) => {
+  // API status endpoint (for debugging)
+  app.get("/api/status", (req, res) => {
     res.status(200).json({ 
       message: "ShopSwiftly API is running",
       version: "1.0.0"
