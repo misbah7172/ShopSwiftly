@@ -1,63 +1,66 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: hsl(48, 65%, 96%);
-  --foreground: hsl(25, 20%, 18%);
-  --card: hsl(48, 65%, 98%);
-  --card-foreground: hsl(25, 20%, 18%);
-  --popover: hsl(48, 65%, 98%);
-  --popover-foreground: hsl(25, 20%, 18%);
-  --primary: hsl(177, 57%, 58%);
-  --primary-foreground: hsl(25, 20%, 18%);
-  --secondary: hsl(8, 81%, 69%);
-  --secondary-foreground: hsl(25, 20%, 18%);
-  --muted: hsl(48, 30%, 92%);
-  --muted-foreground: hsl(25, 20%, 45%);
-  --accent: hsl(36, 89%, 64%);
-  --accent-foreground: hsl(25, 20%, 18%);
-  --destructive: hsl(0, 70%, 60%);
-  --destructive-foreground: hsl(48, 65%, 96%);
-  --border: hsl(48, 30%, 88%);
-  --input: hsl(48, 65%, 94%);
-  --ring: hsl(177, 57%, 58%);
-  --font-sans: Inter, system-ui, sans-serif;
-  --font-serif: Georgia, serif;
-  --font-mono: Menlo, monospace;
-  --font-retro: 'Press Start 2P', monospace;
-  --radius: 8px;
-  --retro-cream: hsl(48, 65%, 96%);
-  --retro-teal: hsl(177, 57%, 58%);
-  --retro-mustard: hsl(36, 89%, 64%);
-  --retro-pink: hsl(8, 81%, 69%);
-  --retro-charcoal: hsl(25, 20%, 18%);
-  --retro-teal-dark: hsl(177, 57%, 48%);
-  --retro-mustard-dark: hsl(36, 89%, 54%);
-  --retro-pink-dark: hsl(8, 81%, 59%);
+  /* Modern Minimal Color Palette */
+  --background: hsl(0, 0%, 98%); /* #F9FAFB - Light gray/white */
+  --foreground: hsl(215, 25%, 12%); /* #1E293B - Modern dark gray */
+  --card: hsl(0, 0%, 100%); /* Pure white for cards */
+  --card-foreground: hsl(215, 25%, 12%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(215, 25%, 12%);
+  --primary: hsl(221, 83%, 53%); /* #2563EB - Clean blue */
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(215, 20%, 40%); /* #64748B - Neutral slate */
+  --secondary-foreground: hsl(0, 0%, 100%);
+  --accent: hsl(142, 76%, 36%); /* #22C55E - Vibrant green */
+  --accent-foreground: hsl(0, 0%, 100%);
+  --muted: hsl(215, 16%, 97%); /* Very light gray */
+  --muted-foreground: hsl(215, 20%, 40%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(215, 16%, 93%); /* Light border */
+  --input: hsl(215, 16%, 97%);
+  --ring: hsl(221, 83%, 53%);
+  
+  /* Typography */
+  --font-heading: 'Poppins', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  
+  /* Radius */
+  --radius: 12px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .dark {
-  --background: hsl(25, 20%, 8%);
-  --foreground: hsl(48, 65%, 86%);
-  --card: hsl(25, 20%, 10%);
-  --card-foreground: hsl(48, 65%, 86%);
-  --popover: hsl(25, 20%, 10%);
-  --popover-foreground: hsl(48, 65%, 86%);
-  --primary: hsl(177, 57%, 58%);
-  --primary-foreground: hsl(25, 20%, 18%);
-  --secondary: hsl(8, 81%, 69%);
-  --secondary-foreground: hsl(25, 20%, 18%);
-  --muted: hsl(25, 20%, 15%);
-  --muted-foreground: hsl(48, 30%, 62%);
-  --accent: hsl(36, 89%, 64%);
-  --accent-foreground: hsl(25, 20%, 18%);
-  --destructive: hsl(0, 70%, 60%);
-  --destructive-foreground: hsl(48, 65%, 96%);
-  --border: hsl(25, 20%, 20%);
-  --input: hsl(25, 20%, 15%);
-  --ring: hsl(177, 57%, 58%);
+  --background: hsl(215, 28%, 9%);
+  --foreground: hsl(0, 0%, 95%);
+  --card: hsl(215, 28%, 11%);
+  --card-foreground: hsl(0, 0%, 95%);
+  --popover: hsl(215, 28%, 11%);
+  --popover-foreground: hsl(0, 0%, 95%);
+  --primary: hsl(221, 83%, 53%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(215, 20%, 40%);
+  --secondary-foreground: hsl(0, 0%, 95%);
+  --muted: hsl(215, 16%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --accent: hsl(142, 76%, 36%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --border: hsl(215, 16%, 20%);
+  --input: hsl(215, 16%, 17%);
+  --ring: hsl(221, 83%, 53%);
 }
 
 @layer base {
@@ -66,50 +69,76 @@
   }
 
   body {
-    @apply font-sans antialiased bg-background text-foreground;
-    background-color: var(--retro-cream);
-    color: var(--retro-charcoal);
+    @apply font-body antialiased bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
   }
 }
 
 @layer utilities {
-  .font-retro {
-    font-family: var(--font-retro);
+  /* Modern Typography Classes */
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
   }
 
-  .retro-border {
-    border: 3px solid;
-    border-image: linear-gradient(45deg, var(--retro-teal), var(--retro-mustard), var(--retro-pink), var(--retro-teal)) 1;
+  /* Modern Shadow Utilities */
+  .shadow-card {
+    box-shadow: var(--shadow);
+  }
+  
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
   }
 
-  .retro-shadow {
-    box-shadow: 8px 8px 0px var(--retro-charcoal);
+  /* Modern Button Styles */
+  .modern-button {
+    @apply inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium transition-all duration-200;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2;
   }
 
-  .retro-button {
-    @apply transition-all duration-200 border-2 uppercase tracking-wide font-bold;
-    border-color: var(--retro-charcoal);
+  .modern-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90;
   }
 
-  .retro-button:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 4px 4px 0px var(--retro-charcoal);
+  .modern-button-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90;
   }
 
-  .product-card {
-    @apply transition-all duration-300 border-2;
-    border-color: var(--retro-charcoal);
+  .modern-button-accent {
+    @apply bg-accent text-accent-foreground hover:bg-accent/90;
   }
 
-  .product-card:hover {
-    transform: translateY(-4px) scale(1.02);
-    box-shadow: 12px 12px 0px var(--retro-charcoal);
+  /* Modern Card Styles */
+  .modern-card {
+    @apply bg-card text-card-foreground rounded-xl border shadow-card;
+    @apply transition-all duration-200 hover:shadow-card-hover;
   }
 
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite alternate;
+  /* Modern Input Styles */
+  .modern-input {
+    @apply w-full rounded-lg border border-input bg-background px-4 py-3 text-sm;
+    @apply focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20;
+    @apply transition-all duration-200;
   }
 
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-transform duration-200 hover:-translate-y-1;
+  }
+
+  .hover-scale {
+    @apply transition-transform duration-200 hover:scale-105;
+  }
+
+  /* Animations */
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }

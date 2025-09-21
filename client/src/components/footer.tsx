@@ -4,49 +4,49 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-retro-charcoal text-retro-cream py-16">
+    <footer className="bg-gray-900 text-white py-16 mt-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div>
-            <h3 className="font-retro text-retro-teal text-lg mb-4 animate-glow">
-              RETROSHOP
+            <h3 className="font-heading font-bold text-white text-xl mb-4">
+              ShopSwiftly
             </h3>
-            <p className="text-retro-cream opacity-80 leading-relaxed">
-              Your destination for authentic vintage treasures and retro collectibles.
+            <p className="text-gray-300 font-body leading-relaxed">
+              Your destination for premium products and exceptional shopping experiences.
             </p>
           </div>
           
           {/* Quick Links */}
           <div>
-            <h4 className="font-bold text-retro-cream mb-4 uppercase tracking-wide">
-              QUICK LINKS
+            <h4 className="font-heading font-semibold text-white mb-4">
+              Quick Links
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
                 <Link href="/">
-                  <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer" data-testid="footer-link-home">
+                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body" data-testid="footer-link-home">
                     Home
                   </span>
                 </Link>
               </li>
               <li>
-                <Link href="/#shop">
-                  <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer" data-testid="footer-link-shop">
+                <Link href="/shop">
+                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body" data-testid="footer-link-shop">
                     Shop
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/profile">
-                  <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer" data-testid="footer-link-profile">
+                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body" data-testid="footer-link-profile">
                     Profile
                   </span>
                 </Link>
               </li>
               <li>
                 <Link href="/cart">
-                  <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer" data-testid="footer-link-cart">
+                  <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body" data-testid="footer-link-cart">
                     Cart
                   </span>
                 </Link>
@@ -56,27 +56,27 @@ export default function Footer() {
           
           {/* Customer Service */}
           <div>
-            <h4 className="font-bold text-retro-cream mb-4 uppercase tracking-wide">
-              CUSTOMER SERVICE
+            <h4 className="font-heading font-semibold text-white mb-4">
+              Customer Service
             </h4>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               <li>
-                <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer">
+                <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body">
                   FAQ
                 </span>
               </li>
               <li>
-                <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer">
+                <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body">
                   Shipping
                 </span>
               </li>
               <li>
-                <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer">
+                <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body">
                   Returns
                 </span>
               </li>
               <li>
-                <span className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors cursor-pointer">
+                <span className="text-gray-300 hover:text-white transition-colors cursor-pointer font-body">
                   Support
                 </span>
               </li>
@@ -85,13 +85,13 @@ export default function Footer() {
           
           {/* Social Media */}
           <div>
-            <h4 className="font-bold text-retro-cream mb-4 uppercase tracking-wide">
-              FOLLOW US
+            <h4 className="font-heading font-semibold text-white mb-4">
+              Follow Us
             </h4>
             <div className="flex space-x-4">
               <a 
                 href="#" 
-                className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors text-xl"
+                className="text-gray-300 hover:text-white transition-colors"
                 data-testid="link-instagram"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -100,7 +100,7 @@ export default function Footer() {
               </a>
               <a 
                 href="#" 
-                className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors text-xl"
+                className="text-gray-300 hover:text-white transition-colors"
                 data-testid="link-twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -109,7 +109,7 @@ export default function Footer() {
               </a>
               <a 
                 href="#" 
-                className="text-retro-cream opacity-80 hover:text-retro-teal transition-colors text-xl"
+                className="text-gray-300 hover:text-white transition-colors"
                 data-testid="link-facebook"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -121,9 +121,9 @@ export default function Footer() {
         </div>
         
         {/* Copyright */}
-        <div className="border-t border-retro-cream border-opacity-20 mt-12 pt-8 text-center">
-          <p className="text-retro-cream opacity-60">
-            © {currentYear} RetroShop. All rights reserved. Made with ❤️ for vintage lovers.
+        <div className="border-t border-gray-700 mt-12 pt-8 text-center">
+          <p className="text-gray-400 font-body">
+            © {currentYear} ShopSwiftly. All rights reserved. Built with modern design principles.
           </p>
         </div>
       </div>
